@@ -30,7 +30,7 @@ Lihtsalt kopeeri harjutus oma kontole, siis anna oma lemmik Octocatile (Mona) **
 
 Harjutuse kopeerimisel soovitame järgmisi seadeid:
 
-- Omanikuks vali oma isiklik konto või organisatsioon.
+- Omanikuks vali **oma organisatsioon** (mitte isiklik konto).
 
 - Soovitame luua avaliku repositooriumi, kuna privaatsed repod kasutavad Actions minuteid.
    
