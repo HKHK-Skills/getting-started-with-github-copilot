@@ -1,95 +1,95 @@
-## Step 4: Engage Hyperdrive - Copilot Agent Mode 🚀
+## Samm 4: Lülita hüperaju sisse - Copilot Agent režiim 🚀
 
-### 📖 Theory: What is Copilot Agent Mode?
+### 📖 Teooria: Mis on Copilot Agent režiim?
 
-Copilot [agent mode](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode) is the next evolution in AI-assisted coding. Acting as an autonomous peer programmer, it performs multi-step coding tasks at your command.
+Copilot [agent režiim](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode) on AI-toega kodeerimise järgmine areng. Toimides autonoomse kaaslasest programmeerijana, täidab see mitmeetapilisi kodeerimisülesandeid sinu käsul.
 
-Copilot Agent Mode responds to compile and lint errors, monitors terminal and test output, and auto-corrects in a loop until the task is completed.
+Copilot Agent režiim reageerib kompileerimis- ja lint-vigadele, jälgib terminali ja testide väljundit ning parandab automaatselt tsüklis, kuni ülesanne on lõpetatud.
 
-#### Edit Mode vs Agent Mode (at a glance)
+#### Muuda režiim vs Agent režiim (ülevaade)
 
-| Aspect         | ✏️ Edit Mode                      | 👩‍🚀 Agent Mode                                                                    |
-| -------------- | --------------------------------- | -------------------------------------------------------------------------------- |
-| Context scope  | Only the files you explicitly add | May read/add additional files & surfaces as needed                               |
-| Self‑review    | Minimal (you drive iteration)     | Built‑in feedback & retry loop on errors/failures                                |
-| Change scope   | Highly scoped & surgical          | Broader; may touch related layers for consistency                                |
-| When to choose | You know exactly what to change   | Goal is broader or uncertain; requires exploration                               |
-| Tool calling   | None (you run commands manually)  | Can invoke tools (read/edit files, run commands, inspect terminal & test output) |
+| Aspekt | ✏️ Muuda režiim | 👩‍🚀 Agent režiim |
+| ------ | --------------- | ----------------- |
+| Konteksti ulatus | Ainult failid, mille sa selgelt lisad | Võib lugeda/lisada täiendavaid faile ja pindu vastavalt vajadusele |
+| Ise-ülevaatus | Minimaalne (sina juhid iteratsiooni) | Sisseehitatud tagasiside ja uuesti proovimise tsükkel vigade korral |
+| Muudatuse ulatus | Väga piiritletud ja kirurgiline | Laiem; võib puudutada seotud kihte järjepidevuse tagamiseks |
+| Millal valida | Tead täpselt, mida muuta | Eesmärk on laiem või ebakindel; nõuab uurimist |
+| Tööriistade kutsumine | Puudub (käivitad käsud käsitsi) | Saab kutsuda tööriistu (lugeda/muuta faile, käivitada käske, kontrollida terminali ja testide väljundit) |
 
-#### 🧰 Agent Mode Tools
+#### 🧰 Agent režiimi tööriistad
 
-Agent mode uses tools to accomplish specialized tasks while processing a user request. Examples of such tasks are:
+Agent režiim kasutab tööriistu spetsialiseeritud ülesannete täitmiseks kasutaja päringu töötlemisel. Selliste ülesannete näited on:
 
-- Finding relevant files to complete your prompt
-- Fetching contents of a webpage
-- Running tests or terminal commands
+- Sinu viiba täitmiseks asjakohaste failide leidmine
+- Veebilehe sisu toomine
+- Testide või terminali käskude käivitamine
 
 > [!TIP]
-> While VS Code provides many built‑in tools, you can also provide Agent Mode more domain‑specific powers through **MCP tools**.
+> Kuigi VS Code pakub palju sisseehitatud tööriistu, saad anda Agent režiimile ka domeenispetsiifilisemaid võimeid **MCP tööriistade** kaudu.
 >
-> Read more on [MCP servers](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) and [GitHub MCP Server](https://github.com/github/github-mcp-server)
+> Loe rohkem [MCP serveritest](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) ja [GitHub MCP serverist](https://github.com/github/github-mcp-server)
 
-Now, let's give **Agent Mode** a try! 👩‍🚀
+Nüüd proovime **Agent režiimi**! 👩‍🚀
 
-### :keyboard: Activity: Use Agent mode to add functional "unregister" buttons
+### :keyboard: Tegevus: Kasuta Agent režiimi funktsionaalsete "tühista registreerimine" nuppude lisamiseks
 
-Let's experiment with some more open-ended requests that will add more functionality to our web application.
+Katsetame mõne avatud lõpuga päringuga, mis lisab meie veebirakendusele rohkem funktsionaalsust.
 
-If you don't get the desired results, you can try other models or provided followup feedback to refine the results.
+Kui sa ei saa soovitud tulemusi, võid proovida teisi mudeleid või anda järeltagasisidet tulemuste täpsustamiseks.
 
-1. Open the **Copilot** chat panel and use the dropdown menu to switch to **Agent** mode.
+1. Ava **Copilot** vestluspaneel ja kasuta rippmenüüd **Agent** režiimile lülitumiseks.
 
-   <img width="250" alt="agent mode" src="https://github.com/user-attachments/assets/9bb85530-77a1-4d47-86b2-99769ce197db" />
+   <img width="250" alt="agent režiim" src="https://github.com/user-attachments/assets/9bb85530-77a1-4d47-86b2-99769ce197db" />
 
-1. Click on the **Tools** icon and explore all Tools currently available to Copilot Agent Mode.
+1. Kliki **Tools** ikoonil ja uuri kõiki Copilot Agent režiimile praegu saadaolevaid tööriistu.
 
-   <img width="250"  alt="tools icon" src="https://github.com/user-attachments/assets/8f73400a-2647-4b28-b52b-721b8cf348d8" />
+   <img width="250" alt="tööriistade ikoon" src="https://github.com/user-attachments/assets/8f73400a-2647-4b28-b52b-721b8cf348d8" />
 
 
-1. Time for our test! Let's ask Copilot to add functionality for removing participants.
+1. Aeg meie testiks! Palume Copilotil lisada osalejate eemaldamise funktsionaalsus.
 
-   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
+   > ![Static Badge](https://img.shields.io/badge/-Viip-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > #codebase Please add a delete icon next to each participant and hide the bullet points.
-   > When clicked, it will unregister that participant from the activity.
+   > #codebase Palun lisa kustutusikoon iga osaleja kõrvale ja peida täpploendid.
+   > Klikkides tühistab see selle osaleja registreeringu tegevuselt.
    > ```
 
-   The `#codebase` tool is used by Copilot to find relevant files, code chunks that are relevant to the task at hand.
+   `#codebase` tööriista kasutab Copilot asjakohaste failide, käesolevale ülesandele relevantsete kooditükkide leidmiseks.
 
-   > 🪧 **Note:** In this lab we explicitly include the `#codebase` tool to get the most repeatable results.
-   > Feel free to try the prompt **without** `#codebase` and observe whether Agent Mode decides to gather broader project context on its own.
+   > 🪧 **Märkus:** Selles laboris lisame selgelt `#codebase` tööriista, et saada kõige korratavamaid tulemusi.
+   > Proovi julgelt viipa **ilma** `#codebase`'ita ja jälgi, kas Agent režiim otsustab ise laiema projekti konteksti koguda.
 
-1. When Copilot is finished, restart the debugger and inspect the results. If you like the results, press the **Keep** button. If not, try providing Copilot some feedback to refined the results.
+1. Kui Copilot on lõpetanud, taaskäivita silur ja kontrolli tulemusi. Kui tulemused meeldivad, vajuta **Keep** nuppu. Kui ei, proovi anda Copilotile tagasisidet tulemuste täpsustamiseks.
 
-1. Ask Copilot to fix a registration bug.
+1. Palu Copilotil parandada registreerimisviga.
 
-   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
+   > ![Static Badge](https://img.shields.io/badge/-Viip-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > I've noticed there seems to be a bug.
-   > When a participant is registered, the page must be refreshed to see the change on the activity.
+   > Olen märganud, et tundub olevat viga.
+   > Kui osaleja on registreeritud, tuleb lehte värskendada, et näha muudatust tegevusel.
    > ```
 
-1. When Copilot is finished, inspect the results. If you like the results, press the **Keep** button. If not, try providing Copilot some feedback.
+1. Kui Copilot on lõpetanud, kontrolli tulemusi. Kui tulemused meeldivad, vajuta **Keep** nuppu. Kui ei, proovi anda Copilotile tagasisidet.
 
-### :keyboard: Activity: Use Agent mode to get test coverage 🧑‍🚀
+### :keyboard: Tegevus: Kasuta Agent režiimi testide katvuse saamiseks 🧑‍🚀
 
-Your backend is now feature‑rich—but still has zero test coverage. Use Copilot **Agent Mode** to add test dependencies, scaffold starter tests and run them.
+Sinu tagarakendus on nüüd funktsioonirikas - aga ikka null testide katvusega. Kasuta Copilot **Agent režiimi** testsõltuvuste lisamiseks, algtestide loomiseks ja nende käivitamiseks.
 
-1. Ask Copilot in **Agent mode** to set up and run tests for your backend.
+1. Palu Copilotit **Agent režiimis** seadistada ja käivitada testid sinu tagarakenduse jaoks.
 
-   > ![Static Badge](https://img.shields.io/badge/-Prompt-placeholder?style=social&logo=github%20copilot)
+   > ![Static Badge](https://img.shields.io/badge/-Viip-placeholder?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Add fastapi tests using pytest in a new tests directory and run them.
-   > Make sure to add any new dependencies to requirements.txt
+   > Lisa fastapi testid kasutades pytest'i uude tests kausta ja käivita need.
+   > Veendu, et lisad kõik uued sõltuvused requirements.txt faili
    > ```
 
-1. As Copilot works on your prompt, different tools might need your approval.
+1. Kui Copilot töötab sinu viiba kallal, võivad erinevad tööriistad vajada sinu heakskiitu.
 
-   **🎯 Goal: Get all tests passing (green) — aim for a clean run! ✅**
+   **🎯 Eesmärk: Saa kõik testid läbima (rohelised) - sihi puhta käivituse poole! ✅**
 
-   > 🪧 **Note:** Copilot may one-shot this with the initial prompt or need more guidance from you.
+   > 🪧 **Märkus:** Copilot võib selle esialgse viibaga kohe ära teha või vajada sinult rohkem juhendamist.
 
-1. Once the tests are passing - **commit** and **push** all changes to your `accelerate-with-copilot` branch to progress to the last step! Almost done!
+1. Kui testid läbivad - **commit'i** ja **saada** kõik muudatused oma `accelerate-with-copilot` harusse, et liikuda viimase sammu juurde! Peaaegu valmis!

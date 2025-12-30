@@ -1,163 +1,163 @@
-## Step 2: Getting work done with Copilot
+## Samm 2: Töö tegemine Copilotiga
 
-In the previous step, GitHub Copilot was able to help us onboard to the project. That alone is a huge time saver, but now let's get some work done!
+Eelmises sammus aitas GitHub Copilot meil projektiga tutvuda. Ainuüksi see on tohutu ajasääst, aga nüüd teeme päris tööd!
 
-:bug: **THERE IS A BUG ON THE WEBSITE** :bug:
+:bug: **VEEBILEHEL ON VIGA** :bug:
 
-We’ve discovered that something’s off in the signup flow.
-Students can currently register for the same activity **more than once**! Let’s see how far Copilot can take us in uncovering the cause and shaping a clean fix.
+Oleme avastanud, et registreerimise voos on midagi valesti.
+Õpilased saavad praegu samale tegevusele registreeruda **rohkem kui ühe korra**! Vaatame, kui kaugele Copilot meid viib põhjuse avastamisel ja puhta paranduse kujundamisel.
 
-Before we dive in, a quick primer on how Copilot works. 🧑‍🚀
+Enne sukeldumist kiire sissejuhatus, kuidas Copilot töötab. 🧑‍🚀
 
-### 📖 Theory: How Copilot works
+### 📖 Teooria: Kuidas Copilot töötab
 
-In short, you can think of Copilot like a very specialized coworker. To be effective with them, you need to provide them background (context) and clear direction (prompts). Additionally, different people are better at different things because of their unique experiences (models).
+Lühidalt, võid mõelda Copilotist kui väga spetsialiseeritud kolleegist. Et temaga efektiivne olla, pead andma talle tausta (konteksti) ja selge suuna (viibad). Lisaks on erinevad inimesed erinevates asjades paremad oma ainulaadsete kogemuste tõttu (mudelid).
 
-- **How do we provide context?:** In our coding environment, Copilot will automatically consider nearby code and open tabs. If you are using chat, you can also explicitly refer to files.
+- **Kuidas me konteksti anname?:** Meie kodeerimiskeskkonnas arvestab Copilot automaatselt lähedal olevat koodi ja avatud vahekaarte. Kui kasutad vestlust, saad ka failidele selgelt viidata.
 
-- **What model should we pick?:** For our exercise, it shouldn't matter too much. Experimenting with different models is part of the fun! That's another lesson! 🤖
+- **Millist mudelit peaksime valima?:** Meie harjutuse jaoks ei tohiks see palju loota. Erinevate mudelitega katsetamine on osa lõbust! See on teine tund! 🤖
 
-- **How do I make prompts?:** Being explicit and clear helps Copilot do the best job. But unlike some traditional systems, you can always clarify your direction with followup prompts.
+- **Kuidas viipasid teha?:** Selgesõnalisus ja selgus aitab Copilotil parimat tööd teha. Kuid erinevalt mõnedest traditsioonilistest süsteemidest saad alati oma suunda täpsustada järelviibadega.
 
 > [!TIP]
-> There several other ways to supplement Copilot's knowledge and capabilities like [chat participants](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-participants), [chat variables](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-variables), [slash commands](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#slash-commands-1), and [MCP tools](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
+> On mitmeid teisi viise Copiloti teadmiste ja võimete täiendamiseks nagu [vestlusosalised](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-participants), [vestlusmuutujad](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-variables), [kaldkriipsu käsud](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#slash-commands-1) ja [MCP tööriistad](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
 
-### :keyboard: Activity: Use Copilot to fix our registration bug :bug:
+### :keyboard: Tegevus: Kasuta Copilotit meie registreerimisvea parandamiseks :bug:
 
-1. Let's ask Copilot to suggest where our bug might be coming from. Open the **Copilot Chat** panel in **Ask mode** and ask the following.
+1. Palume Copilotil soovitada, kust meie viga võib pärineda. Ava **Copilot Chat** paneel **Küsi režiimis** ja küsi järgmist.
 
-   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
+   > ![Static Badge](https://img.shields.io/badge/-Viip-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > @workspace Students are able to register twice for an activity.
-   > Where could this bug be coming from?
+   > @workspace Õpilased saavad tegevusele kaks korda registreeruda.
+   > Kust see viga võib pärineda?
    > ```
 
-1. Now that we know the issue is in the `src/app.py` file and the `signup_for_activity` method, let's follow Copilot's recommendation and go fix it (semi-manually). We'll start with a comment and let Copilot finish the correction.
+1. Nüüd, kui teame, et probleem on `src/app.py` failis ja `signup_for_activity` meetodis, järgime Copiloti soovitust ja parandame selle (poolkäsitsi). Alustame kommentaariga ja laseme Copilotil paranduse lõpetada.
 
-   1. In VS Code, select the file **Explorer tab** to show the project files and open the `src/app.py` file.
+   1. VS Code'is vali **Explorer** vaheleht projekti failide kuvamiseks ja ava `src/app.py` fail.
 
-   1. Scroll near the bottom of the file and find the `signup_for_activity` method.
+   1. Keri faili lõpu lähedale ja leia `signup_for_activity` meetod.
 
-   1. Find the comment line that describes adding a student. Above this is where it seems logical to do our registration check.
+   1. Leia kommentaaririda, mis kirjeldab õpilase lisamist. Selle kohal tundub loogiline teha meie registreerimiskontroll.
 
-   1. Enter the below comment and press enter to go to the next line. After a moment, temporary shadow text will appear with a suggestion from Copilot! Nice! :tada:
+   1. Sisesta allolev kommentaar ja vajuta enter järgmisele reale minekuks. Hetke pärast ilmub ajutine varjutekst Copiloti soovitusega! Tore! :tada:
 
       ```python
-      # Validate student is not already signed up
+      # Kontrolli kas õpilane pole juba registreeritud
       ```
 
-   1. Press `Tab` to accept Copilot's suggestion and convert the shadow text to code.
+   1. Vajuta `Tab`, et aktsepteerida Copiloti soovitus ja muuta varjutekst koodiks.
 
    <details>
-   <summary>Example Results</summary><br/>
+   <summary>Näite tulemused</summary><br/>
 
-   Copilot is growing every day and may not always produce the same results. If you are unhappy with the suggestions, here is an example of a valid suggestion result we produced during the making of this exercise. You can use it to continue forward.
+   Copilot areneb iga päev ja ei pruugi alati samu tulemusi anda. Kui sa pole soovitustega rahul, siin on näide kehtivast soovitustulemusest, mille me selle harjutuse tegemise ajal tootsime. Saad seda kasutada jätkamiseks.
 
    ```python
    @app.post("/activities/{activity_name}/signup")
    def signup_for_activity(activity_name: str, email: str):
-      """Sign up a student for an activity"""
-      # Validate activity exists
+      """Registreeri õpilane tegevusele"""
+      # Kontrolli kas tegevus eksisteerib
       if activity_name not in activities:
-         raise HTTPException(status_code=404, detail="Activity not found")
+         raise HTTPException(status_code=404, detail="Tegevust ei leitud")
 
-      # Get the activity
+      # Võta tegevus
       activity = activities[activity_name]
 
-      # Validate student is not already signed up
+      # Kontrolli kas õpilane pole juba registreeritud
       if email in activity["participants"]:
-        raise HTTPException(status_code=400, detail="Student is already signed up")
+        raise HTTPException(status_code=400, detail="Õpilane on juba registreeritud")
 
-      # Add student
+      # Lisa õpilane
       activity["participants"].append(email)
-      return {"message": f"Signed up {email} for {activity_name}"}
+      return {"message": f"Registreeriti {email} tegevusele {activity_name}"}
    ```
 
    </details>
 
-### :keyboard: Activity: Let Copilot generate sample data 📋
+### :keyboard: Tegevus: Lase Copilotil genereerida näidisandmed 📋
 
-In new project developments, it's often helpful to have some realistic looking fake data for testing. Copilot is excellent at this task, so let's add some more sample activities and introduce another way to interact with Copilot using **Inline Chat**
+Uutes projektiarendustes on sageli kasulik omada realistlikke võltsandmeid testimiseks. Copilot on selles ülesandes suurepärane, nii et lisame veel näidistegevusi ja tutvustame veel üht viisi Copilotiga suhtlemiseks, kasutades **Reasisest vestlust**
 
-**Inline Chat** and the **Copilot Chat** panel are similar, but differ in scope: Copilot Chat handles broader, multi-file or exploratory questions; Inline Chat is faster when you want targeted help on the exact line or block in front of you.
+**Reasisene vestlus** ja **Copilot Chat** paneel on sarnased, kuid erinevad ulatuses: Copilot Chat tegeleb laiemate, mitme faili või uurimuslike küsimustega; Reasisene vestlus on kiirem, kui tahad sihtotstarbe abi täpsel real või plokil enda ees.
 
-1. Near the top of the `src/app.py` file (about line 23), find the `activities` variable, where our example extracurricular activities are configured.
+1. `src/app.py` faili ülaosa lähedal (umbes rida 23) leia `activities` muutuja, kus meie näide huviringid on seadistatud.
 
-1. Click on any of the related lines and bring up Copilot inline chat by using the keyboard command `Ctrl + I` (windows) or `Cmd + I` (mac).
+1. Kliki ükskõik millisel seotud real ja ava Copiloti reasisene vestlus kiirklahviga `Ctrl + I` (Windows) või `Cmd + I` (Mac).
 
-   > 💡 **Tip:** Another way to bring up Copilot inline chat is: `right click` on any of the selected lines -> `Copilot` -> `Editor Inline Chat`.
+   > 💡 **Vihje:** Teine viis Copiloti reasisese vestluse avamiseks: `paremklikk` ükskõik millisel valitud real -> `Copilot` -> `Editor Inline Chat`.
 
-1. Enter the following prompt text and press enter or the **Send and Dispatch** button.
+1. Sisesta järgmine viipatekst ja vajuta enter või **Send and Dispatch** nuppu.
 
-   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
+   > ![Static Badge](https://img.shields.io/badge/-Viip-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Add 2 more sports related activities, 2 more artistic
-   > activities, and 2 more intellectual activities.
+   > Lisa 2 spordiga seotud tegevust, 2 kunstiga seotud
+   > tegevust ja 2 intellektuaalset tegevust.
    > ```
 
-1. After a moment, Copilot will directly start making changes to the code. The changes will be stylized differently to make any additions and removals easy to identify. Take a moment to inspect and then press the **Accept** button.
+1. Hetke pärast hakkab Copilot otse koodi muutma. Muudatused on erinevalt stiliseeritud, et lisandusi ja eemaldusi oleks lihtne tuvastada. Võta hetk ülevaatamiseks ja vajuta **Accept** nuppu.
 
    <details>
-   <summary>Example Results</summary><br/>
+   <summary>Näite tulemused</summary><br/>
 
-   Copilot is growing every day and may not always produce the same results. If you are unhappy with the suggestions, here is an example result we produced during the making of this exercise. You can use it to continue forward, if having trouble.
+   Copilot areneb iga päev ja ei pruugi alati samu tulemusi anda. Kui sa pole soovitustega rahul, siin on näitetulemus, mille me selle harjutuse tegemise ajal tootsime. Saad seda jätkamiseks kasutada, kui on probleeme.
 
    ```python
-   # In-memory activity database
+   # Mälus tegevuste andmebaas
    activities = {
-      "Chess Club": {
-         "description": "Learn strategies and compete in chess tournaments",
-         "schedule": "Fridays, 3:30 PM - 5:00 PM",
+      "Maleklubi": {
+         "description": "Õpi strateegiaid ja võistle maleturniiridel",
+         "schedule": "Reedeti, 15:30 - 17:00",
          "max_participants": 12,
          "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
       },
-      "Programming Class": {
-         "description": "Learn programming fundamentals and build software projects",
-         "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
+      "Programmeerimisklass": {
+         "description": "Õpi programmeerimise põhitõdesid ja ehita tarkvaraprojekte",
+         "schedule": "Teisipäeviti ja neljapäeviti, 15:30 - 16:30",
          "max_participants": 20,
          "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
       },
-      "Gym Class": {
-         "description": "Physical education and sports activities",
-         "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
+      "Kehalise kasvatuse tund": {
+         "description": "Kehaline kasvatus ja sporditegevused",
+         "schedule": "Esmaspäeviti, kolmapäeviti, reedeti, 14:00 - 15:00",
          "max_participants": 30,
          "participants": ["john@mergington.edu", "olivia@mergington.edu"]
       },
-      "Basketball Team": {
-         "description": "Competitive basketball training and games",
-         "schedule": "Tuesdays and Thursdays, 4:00 PM - 6:00 PM",
+      "Korvpallimeeskond": {
+         "description": "Võistluslik korvpallitreening ja mängud",
+         "schedule": "Teisipäeviti ja neljapäeviti, 16:00 - 18:00",
          "max_participants": 15,
          "participants": []
       },
-      "Swimming Club": {
-         "description": "Swimming training and water sports",
-         "schedule": "Mondays and Wednesdays, 3:30 PM - 5:00 PM",
+      "Ujumisklubi": {
+         "description": "Ujumistreeningud ja veespordialad",
+         "schedule": "Esmaspäeviti ja kolmapäeviti, 15:30 - 17:00",
          "max_participants": 20,
          "participants": []
       },
-      "Art Studio": {
-         "description": "Express creativity through painting and drawing",
-         "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+      "Kunstistuudio": {
+         "description": "Väljenda loovust maalimise ja joonistamise kaudu",
+         "schedule": "Kolmapäeviti, 15:30 - 17:00",
          "max_participants": 15,
          "participants": []
       },
-      "Drama Club": {
-         "description": "Theater arts and performance training",
-         "schedule": "Tuesdays, 4:00 PM - 6:00 PM",
+      "Draamaklubi": {
+         "description": "Teatrikunst ja esinemiskoolitus",
+         "schedule": "Teisipäeviti, 16:00 - 18:00",
          "max_participants": 25,
          "participants": []
       },
-      "Debate Team": {
-         "description": "Learn public speaking and argumentation skills",
-         "schedule": "Thursdays, 3:30 PM - 5:00 PM",
+      "Väitlusklubi": {
+         "description": "Õpi avaliku esinemise ja argumenteerimisoskusi",
+         "schedule": "Neljapäeviti, 15:30 - 17:00",
          "max_participants": 16,
          "participants": []
       },
-      "Science Club": {
-         "description": "Hands-on experiments and scientific exploration",
-         "schedule": "Fridays, 3:30 PM - 5:00 PM",
+      "Teadusklubi": {
+         "description": "Praktilised katsed ja teaduslik avastamine",
+         "schedule": "Reedeti, 15:30 - 17:00",
          "max_participants": 20,
          "participants": []
       }
@@ -166,33 +166,33 @@ In new project developments, it's often helpful to have some realistic looking f
 
    </details>
 
-### :keyboard: Activity: Use Copilot to describe our work 💬
+### :keyboard: Tegevus: Kasuta Copilotit meie töö kirjeldamiseks 💬
 
-Nice work fixing that bug and expanding the example activities! Now let's get our work committed and pushed to GitHub, again with the help of Copilot!
+Hea töö vea parandamisel ja näidistegevuste laiendamisel! Nüüd saame oma töö commit'itud ja GitHubi saadetud, jälle Copiloti abiga!
 
-1. In the left sidebar, select the `Source Control` tab.
+1. Vasakul külgribal vali `Source Control` vaheleht.
 
-   > 💡 **Tip:** Opening a file from the source control area will show the differences to the original rather than simply opening it.
+   > 💡 **Vihje:** Faili avamine versioonihalduse alast näitab erinevusi originaaliga, mitte lihtsalt ei ava seda.
 
-1. Find the `app.py` file and press the `+` sign to collect your changes together in the staging area.
+1. Leia `app.py` fail ja vajuta `+` märki oma muudatuste kogumiseks ettevalmistusalasse.
 
-   ![image](https://github.com/user-attachments/assets/7d3daf4e-4125-4775-88a7-33251cd7293e)
+   ![pilt](https://github.com/user-attachments/assets/7d3daf4e-4125-4775-88a7-33251cd7293e)
 
-1. Above the list of staged changes, find the **Message** text box, but **don't enter anything** for now.
+1. Ettevalmistatud muudatuste nimekirja kohal leia **Message** tekstikast, aga **ära sisesta praegu midagi**.
 
-   - Typically, you would write a short description of the changes here, but now we have Copilot to help out!
+   - Tavaliselt kirjutaksid siia muudatuste lühikirjelduse, aga nüüd on meil Copilot abiks!
 
-1. To the right of the **Message** text box, find and click the **Generate Commit Message** button (sparkles icon).
+1. **Message** tekstikasti paremal pool leia ja kliki **Generate Commit Message** nuppu (sädelevate ikoon).
 
-1. Press the **Commit** button and **Sync Changes** button to push your changes to GitHub.
+1. Vajuta **Commit** nuppu ja **Sync Changes** nuppu oma muudatuste GitHubi saatmiseks.
 
-1. Wait a moment for Mona to check your work, provide feedback, and share the next lesson.
+1. Oota hetk, kuni Mona kontrollib sinu tööd, annab tagasisidet ja jagab järgmist tundi.
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Probleeme? 🤷</summary><br/>
 
-If you don't get feedback, here are some things to check:
+Kui sa ei saa tagasisidet, kontrolli järgmist:
 
-- Make sure your pushed the `src/app.py` file changes to the branch `accelerate-with-copilot`.
+- Veendu, et saatsid `src/app.py` faili muudatused harusse `accelerate-with-copilot`.
 
 </details>

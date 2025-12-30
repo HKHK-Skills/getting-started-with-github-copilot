@@ -1,42 +1,42 @@
-## Step 5: Using GitHub Copilot within a pull request
+## Samm 5: GitHub Copiloti kasutamine pull request'is
 
-Congratulations! You are finished with coding for this exercise (and VS Code). Now it's time to merge our work. :tada: To wrap up, let's learn about two limited-access Copilot features that can speed up our pull requests!
+Palju õnne! Oled selle harjutuse kodeerimisega (ja VS Code'iga) valmis. Nüüd on aeg meie töö ühendada. :tada: Lõpetuseks õpime kahest piiratud ligipääsuga Copiloti funktsioonist, mis võivad meie pull request'e kiirendada!
 
-### 📖 Theory: GitHub Copilot for pull requests
+### 📖 Teooria: GitHub Copilot pull request'ide jaoks
 
-#### Copilot pull request summaries
+#### Copiloti pull request'i kokkuvõtted
 
-Typically, you would review your notes and commit messages then summarize them for your pull request description. This may take some time, especially if commit messages are inconsistent or code is not documented well. Fortunately, Copilot can consider all changes in the pull request and provide the important highlights, and with references too!
+Tavaliselt vaataksid oma märkmed ja commit-sõnumid üle ja siis teeksid neist kokkuvõtte oma pull request'i kirjelduse jaoks. See võib võtta aega, eriti kui commit-sõnumid on ebajärjekindlad või kood pole hästi dokumenteeritud. Õnneks saab Copilot arvestada kõiki pull request'i muudatusi ja pakkuda olulisi esiletõstmisi, ka viidetega!
 
-#### Copilot code review
+#### Copiloti koodi ülevaatus
 
-More eyes on our work is always useful so let's ask Copilot to do a first pass before we do a normal peer review process. Copilot is great at catching common mistakes that are fixed by simple adjustments, but please remember to use it responsibly.
+Rohkem silmi meie tööl on alati kasulik, nii et palume Copilotil teha esimene läbivaatus enne tavalist kolleegide ülevaatuse protsessi. Copilot on suurepärane tavaliste vigade tabamisel, mis parandatakse lihtsate kohandustega, aga palun kasuta seda vastutustundlikult.
 
 > [!NOTE]
-> These features are only available on paid plans of **GitHub Copilot**. [[docs]](https://docs.github.com/en/copilot/get-started/plans)
+> Need funktsioonid on saadaval ainult **GitHub Copiloti** tasulistel plaanidel. [[docs]](https://docs.github.com/en/copilot/get-started/plans)
 
-### :keyboard: Activity: Summarize and review a PR with Copilot
+### :keyboard: Tegevus: Tee PR-i kokkuvõte ja ülevaatus Copilotiga
 
-Both **Copilot pull request summaries** and **Copilot code review** have limited access, so this activity is mostly optional. If you don't have access, skip the optional steps of this activity.
+Nii **Copiloti pull request'i kokkuvõtted** kui **Copiloti koodi ülevaatus** on piiratud ligipääsuga, nii et see tegevus on enamasti valikuline. Kui sul pole ligipääsu, jäta selle tegevuse valikulised sammud vahele.
 
-1. In a web browser, open another tab and navigate to your exercise repository.
+1. Veebibrauseris ava teine vaheleht ja navigeeri oma harjutuse repositooriumisse.
 
-1. You might notice a **notification banner** suggesting to create a new pull request. Click that or use the **Pull Requests** tab at the top to **create a new pull request**. Please use the following details:
+1. Võid märgata **teavitusbännerit**, mis soovitab luua uut pull request'i. Kliki sellel või kasuta **Pull Requests** vahelehte ülaosas **uue pull request'i loomiseks**. Palun kasuta järgmisi üksikasju:
 
    - **base:** `main`
    - **compare:** `accelerate-with-copilot`
-   - **title:** `Improve student activity registration system`
+   - **title:** `Paranda õpilaste tegevuste registreerimissüsteemi`
 
-1. (Optional) In the PR description toolbar click the **Copilot** icon and **Summary** action. After a moment, Copilot will add a description based on your changes. :memo:
+1. (Valikuline) PR-i kirjelduse tööriistareal kliki **Copilot** ikoonil ja **Summary** tegevusel. Hetke pärast lisab Copilot kirjelduse sinu muudatuste põhjal. :memo:
 
-   <img alt="Copilot summarize button " width="450px" src="https://github.com/user-attachments/assets/7a712d8b-484d-41df-9353-bc2b397fc1e0">
+   <img alt="Copiloti kokkuvõtte nupp" width="450px" src="https://github.com/user-attachments/assets/7a712d8b-484d-41df-9353-bc2b397fc1e0">
 
-1. (Optional) In the right side information panel at the top, locate the **Reviewers** section and click the **Request** button next to a **Copilot icon**. Wait a moment for Copilot to add a review comment to your pull request!
+1. (Valikuline) Paremal küljel infopaneelis ülaosas leia **Reviewers** sektsioon ja kliki **Request** nupul **Copilot ikooni** kõrval. Oota hetk, kuni Copilot lisab ülevaatuse kommentaari sinu pull request'ile!
 
-   <img alt="Copilot review button" width="300px" src="https://github.com/user-attachments/assets/39b15002-a235-4c25-b09d-6a8097e27b62">
+   <img alt="Copiloti ülevaatuse nupp" width="300px" src="https://github.com/user-attachments/assets/39b15002-a235-4c25-b09d-6a8097e27b62">
 
-   > 💡 **Tip:** Notice a log entry that Copilot was requested for a review.
+   > 💡 **Vihje:** Märka logikirjet, et Copilotilt paluti ülevaatust.
 
-1. At the bottom, press the **Merge pull request** button. Nice work! You are all done! :tada:
+1. Allosas vajuta **Merge pull request** nuppu. Suurepärane töö! Oled valmis! :tada:
 
-1. Wait a moment for Mona to check your work, provide feedback, and post a final review of this exercise!
+1. Oota hetk, kuni Mona kontrollib sinu tööd, annab tagasisidet ja postitab selle harjutuse lõplike ülevaatuse!

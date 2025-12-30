@@ -1,127 +1,127 @@
-## Step 1: Hello Copilot
+## Samm 1: Tere Copilot
 
-Welcome to your **"Getting Started with GitHub Copilot"** exercise! :robot:
+Tere tulemast oma **"GitHub Copiloti alustamine"** harjutusse! :robot:
 
-In this exercise, you will be using different GitHub Copilot features to work on a website that allows students of Mergington High School to sign up for extracurricular activities. 🎻 ⚽️ ♟️
+Selles harjutuses kasutad erinevaid GitHub Copiloti funktsioone töötades veebilehega, mis võimaldab Mergington High Schooli õpilastel registreeruda huviringidesse. 🎻 ⚽️ ♟️
 
-<img width="600" alt="screenshot of Mergington High School WebApp" src="https://github.com/user-attachments/assets/472398fd-1aa1-4084-b443-4e242deb30d9" />
+<img width="600" alt="Mergington High Schooli veebirakenduse ekraanipilt" src="https://github.com/user-attachments/assets/472398fd-1aa1-4084-b443-4e242deb30d9" />
 
-### 📖 Theory: Getting to know GitHub Copilot
+### 📖 Teooria: GitHub Copilotiga tutvumine
 
-<img width="150" align="right" alt="copilot logo" src="https://github.com/user-attachments/assets/4d22496d-850b-4785-aafe-11cba03cd5f2" />
+<img width="150" align="right" alt="copiloti logo" src="https://github.com/user-attachments/assets/4d22496d-850b-4785-aafe-11cba03cd5f2" />
 
-GitHub Copilot is an AI coding assistant that helps you write code faster and with less effort, allowing you to focus more energy on problem solving and collaboration.
+GitHub Copilot on AI kodeerimisabiline, mis aitab sul koodi kiiremini ja väiksema vaevaga kirjutada, võimaldades sul keskenduda rohkem probleemide lahendamisele ja koostööle.
 
-GitHub Copilot has been proven to increase developer productivity and accelerate the pace of software development. For more information, see [Research: quantifying GitHub Copilot’s impact on developer productivity and happiness in the GitHub blog.](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
+GitHub Copilot on tõestatud suurendavat arendajate produktiivsust ja kiirendavat tarkvara arenduse tempot. Lisainfot leiad artiklist [Research: quantifying GitHub Copilot's impact on developer productivity and happiness GitHubi blogis.](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
 
-As you work in your IDE, you'll most often interact with GitHub Copilot in the following ways:
+Töötades oma IDE-s, suhtled GitHub Copilotiga kõige sagedamini järgmistel viisidel:
 
-| Interaction Mode          | 📝 Description                                                                                                                                      | 🎯 Best For                                                                                                      |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **⚡ Inline suggestions** | AI-powered code suggestions that appear as you type, offering context-aware completions from single lines to entire functions.                      | Completion of the current line, sometimes a whole new block of code                                              |
-| **💬 Ask Mode**           | Optimized for answering questions about your codebase, coding, and general technology concepts.                                                     | Understanding how code works, brainstorming ideas, asking questions                                              |
-| **✏️ Edit Mode**          | Optimized for making code edits across multiple files in your project. VS Code directly applies the code changes in the editor for in-place review. | Coding tasks when you have a good understanding of the changes you want to make and which files you want to edit |
-| **🤖 Agent Mode**         | Optimized for making autonomous edits across multiple files in your project.                                                                        | Coding tasks when you have a less well-defined task that might also require running terminal commands and tools  |
-| **💭 Inline Chat**        | Interactive chat scoped to your current file or selection. Ask questions about specific code blocks.                                                | Code explanations, debugging specific functions, targeted improvements                                           |
+| Suhtlusrežiim | 📝 Kirjeldus | 🎯 Parim kasutus |
+| ------------- | ------------ | ---------------- |
+| **⚡ Reasisesed soovitused** | AI-toega koodisoovitused, mis ilmuvad kirjutades, pakkudes kontekstiteadlikke täiendusi ühest reast tervete funktsioonideni. | Praeguse rea täiendamine, mõnikord terve uus koodiplokk |
+| **💬 Küsi režiim** | Optimeeritud vastama küsimustele sinu koodibaasi, kodeerimise ja üldiste tehnoloogiakontseptsioonide kohta. | Koodi tööpõhimõtete mõistmine, ideede ajurünnak, küsimuste esitamine |
+| **✏️ Muuda režiim** | Optimeeritud koodi muudatuste tegemiseks mitmes failis sinu projektis. VS Code rakendab koodimuudatused otse redaktoris kohapealse ülevaatuse jaoks. | Kodeerimisülesanded, kui sul on hea arusaam soovitud muudatustest ja failidest |
+| **🤖 Agent režiim** | Optimeeritud autonoomsete muudatuste tegemiseks mitmes failis sinu projektis. | Kodeerimisülesanded, kui sul on vähem määratletud ülesanne, mis võib nõuda ka terminali käskude ja tööriistade käivitamist |
+| **💭 Reasisene vestlus** | Interaktiivne vestlus, mis on piiratud sinu praeguse faili või valikuga. Küsi küsimusi konkreetsete koodiplokkide kohta. | Koodi selgitused, konkreetsete funktsioonide silumine, sihitud parendused |
 
-As you work, you'll find GitHub Copilot can help out in several places across the `github.com` website and in your favorite coding environments such as VS Code, Jet Brains, and Xcode!
+Töötades leiad, et GitHub Copilot saab aidata mitmes kohas üle `github.com` veebilehe ja sinu lemmik kodeerimiskeskkondades nagu VS Code, Jet Brains ja Xcode!
 
-For today's coding though, we will practice with VS Code in a pre-configured development environment known as a [GitHub Codespace](https://github.com/features/codespaces).
+Tänase kodeerimise jaoks harjutame VS Code'iga eelseadistatud arenduskeskkonnas, mida tuntakse kui [GitHub Codespace](https://github.com/features/codespaces).
 
 > [!TIP]
-> You can learn more about current and upcoming features in the [GitHub Copilot Features](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features) documentation.
+> Praeguste ja tulevaste funktsioonide kohta saad rohkem teada [GitHub Copiloti funktsioonide](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features) dokumentatsioonist.
 
-### :keyboard: Activity: Get a project intro from Copilot Chat
+### :keyboard: Tegevus: Saa projektitutvustus Copilot Chat'ist
 
-Let's start up our development environment, use copilot to learn a bit about the project, and then give it a test run.
+Alustame oma arenduskeskkonnaga, kasutame Copilotit projekti kohta veidi õppimiseks ja siis testime seda.
 
-1. Use the below button to open the **Create Codespace** page in a new tab. Use the default configuration.
+1. Kasuta allolevat nuppu **Create Codespace** lehe avamiseks uuel vahekaardil. Kasuta vaikeseadistust.
 
-   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
+   [![Ava GitHub Codespaces'is](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
 
-1. Confirm the **Repository** field is your copy of the exercise, not the original, then click the green **Create Codespace** button.
+1. Kinnita, et **Repository** väli on sinu koopia harjutusest, mitte originaal, siis kliki rohelist **Create Codespace** nuppu.
 
-   - ✅ Your copy: `/{{full_repo_name}}`
-   - ❌ Original: `/skills/getting-started-with-github-copilot`
+   - ✅ Sinu koopia: `/{{full_repo_name}}`
+   - ❌ Originaal: `/skills/getting-started-with-github-copilot`
 
-1. Wait a moment for Visual Studio Code to load in your browser.
+1. Oota hetk, kuni Visual Studio Code laadib sinu brauseris.
 
-1. In the left sidebar, click the extensions tab and verify that the `GitHub Copilot` and `Python` extensions are installed and enabled.
+1. Vasakul külgribal kliki laienduste vahekaardil ja kontrolli, et `GitHub Copilot` ja `Python` laiendused on paigaldatud ja lubatud.
 
-   <img width="350" alt="copilot extension for VS Code" src="https://github.com/user-attachments/assets/ef1ef984-17fc-4b20-a9a6-65a866def468" />
+   <img width="350" alt="copiloti laiendus VS Code jaoks" src="https://github.com/user-attachments/assets/ef1ef984-17fc-4b20-a9a6-65a866def468" />
 
-   <img width="350" alt="python extension for VS Code" src="https://github.com/user-attachments/assets/3040c0f5-1658-47e2-a439-20504a384f77" />
+   <img width="350" alt="pythoni laiendus VS Code jaoks" src="https://github.com/user-attachments/assets/3040c0f5-1658-47e2-a439-20504a384f77" />
 
-1. At the top of VS Code, locate and click the **Toggle Chat icon** to open a Copilot Chat side panel.
+1. VS Code ülaosas leia ja kliki **Toggle Chat ikooni**, et avada Copilot Chat külgpaneel.
 
-   <img width="150" alt="image" src="https://github.com/user-attachments/assets/abf584e9-ef68-4725-8b22-4803805e6d55" />
+   <img width="150" alt="pilt" src="https://github.com/user-attachments/assets/abf584e9-ef68-4725-8b22-4803805e6d55" />
 
-   > 🪧 **Note:** If this is your first time using GitHub Copilot, you will need to accept the usage terms to continue.
+   > 🪧 **Märkus:** Kui see on sinu esimene kord GitHub Copiloti kasutamisel, pead jätkamiseks aktsepteerima kasutustingimused.
 
-1. Make sure you are in **Ask Mode** for our first interaction
+1. Veendu, et oled meie esimeseks suhtluseks **Küsi režiimis**
 
+   <img width="350" alt="ekraanipilt Küsi režiimi valikust Copilot Chat'is" src="https://github.com/user-attachments/assets/fb1d7cac-2d39-4199-b5d9-0f3dfcfb3bcd" />
 
-   <img width="350" alt="screenshot showing Ask Mode selection in Copilot Chat" src="https://github.com/user-attachments/assets/fb1d7cac-2d39-4199-b5d9-0f3dfcfb3bcd" />
-1. Enter the below prompt to ask Copilot to introduce you to the project.
+1. Sisesta allolev viip, et paluda Copilotil sind projektiga tutvustada.
 
-   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
+   > ![Static Badge](https://img.shields.io/badge/-Viip-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > @workspace Please briefly explain the structure of this project.
-   > What should I do to run it?
+   > @workspace Palun selgita lühidalt selle projekti struktuuri.
+   > Mida ma pean tegema selle käivitamiseks?
    > ```
 
-   > 🪧 **Note:** It is not necessary to follow Copilot's recommended instructions. We have already prepared the environment for you.
+   > 🪧 **Märkus:** Copiloti soovitatud juhiseid pole vaja järgida. Oleme juba keskkonna sinu jaoks ette valmistanud.
 
    <details>
-   <summary>What is @workspace?</summary>
+   <summary>Mis on @workspace?</summary>
 
-   Great question! This is a specialized [chat participant](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-participants) that will explore the project repository and try to include relevant additional context.
+   Hea küsimus! See on spetsialiseeritud [vestlusosaline](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet?tool=vscode#chat-participants), mis uurib projekti repositooriumi ja üritab kaasata asjakohast lisakonteksti.
 
    </details>
 
-1. Now that we know a bit more about the project, let's actually try running it! In the left sidebar, select the `Run and Debug` tab and then press the **Start Debugging** icon.
+1. Nüüd, kui teame projekti kohta veidi rohkem, proovime seda tegelikult käivitada! Vasakul külgribal vali `Run and Debug` vaheleht ja vajuta **Start Debugging** ikooni.
 
-   <img width="300" alt="image" src="https://github.com/user-attachments/assets/50b27f2a-5eab-4827-9343-ab5bce62357e" />
+   <img width="300" alt="pilt" src="https://github.com/user-attachments/assets/50b27f2a-5eab-4827-9343-ab5bce62357e" />
 
-1. We want to see our webpage running in a browser, so let's find the url and port. If it isn't visible, expand the lower panel and select the **Ports** tab.
+1. Tahame näha oma veebilehte brauseris, nii et leiame url-i ja pordi. Kui see pole nähtav, laienda alumist paneeli ja vali **Ports** vaheleht.
 
-1. In the list, find port `8000` and the related link. Hover over the link and select the **Open in browser** icon.
+1. Nimekirjas leia port `8000` ja seotud link. Hõlju lingi kohal ja vali **Open in browser** ikoon.
 
-   ![image](https://github.com/user-attachments/assets/92d5642e-ce99-4a66-850c-2d311a673596)
+   ![pilt](https://github.com/user-attachments/assets/92d5642e-ce99-4a66-850c-2d311a673596)
 
-### :keyboard: Activity: Use Copilot to help remember a terminal command 🙋
+### :keyboard: Tegevus: Kasuta Copilotit terminali käsu meeldetuletamiseks 🙋
 
-Great work! Now that we are familiar with the app and we know it works, let's ask copilot for help starting a branch so we can do some customizing.
+Suurepärane töö! Nüüd, kui oleme rakendusega tuttavad ja teame, et see töötab, palume Copilotilt abi haru alustamiseks, et saaksime kohandada.
 
-1. In VS Code's bottom panel, select the **Terminal** tab and on the right side click the plus `+` sign to create a new terminal window.
+1. VS Code alumises paneelis vali **Terminal** vaheleht ja paremal pool kliki pluss `+` märki uue terminaliakna loomiseks.
 
-   > 🪧 **Note:** This will avoid stopping the existing debug session that is hosting our web application service.
+   > 🪧 **Märkus:** See väldib olemasoleva silumissessiooni peatamist, mis majutab meie veebirakenduse teenust.
 
-1. Within the new terminal window use the keyboard shortcut `Ctrl + I` (windows) or `Cmd + I` (mac) to bring up **Copilot's Terminal Inline Chat**.
+1. Uues terminaliaknas kasuta kiirklahvi `Ctrl + I` (Windows) või `Cmd + I` (Mac), et avada **Copiloti terminali reasisene vestlus**.
 
-1. Let's ask Copilot to help us remember a command we have forgotten: creating a branch and publishing it.
+1. Palume Copilotilt abi unustatud käsu meeldetuletamiseks: haru loomine ja avaldamine.
 
-   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
+   > ![Static Badge](https://img.shields.io/badge/-Viip-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Hey copilot, how can I create and publish a new Git branch called "accelerate-with-copilot"?
+   > Hei Copilot, kuidas saan luua ja avaldada uue Giti haru nimega "accelerate-with-copilot"?
    > ```
 
-   > 💡 **Tip:** If Copilot doesn't give you quite what you want, you can always continue explaining what you need. Copilot will remember the conversation history for follow-up responses.
+   > 💡 **Vihje:** Kui Copilot ei anna päris seda, mida tahad, saad alati jätkata selgitamist, mida vajad. Copilot mäletab vestlusajalugu järeldustuste jaoks.
 
-1. Press the `Run` button to let Copilot insert the terminal command for us. No need to copy and paste!
+1. Vajuta `Run` nuppu, et lasta Copilotil terminali käsk meie eest sisestada. Pole vaja kopeerida ja kleepida!
 
-1. After a moment, look in the VS Code lower status bar, on the left, to see the active branch. It should now say `accelerate-with-copilot`. If so, you are all done with this step!
+1. Hetke pärast vaata VS Code alumist olekuriba vasakul, et näha aktiivset haru. See peaks nüüd ütlema `accelerate-with-copilot`. Kui jah, oled selle sammuga valmis!
 
-1. Now that your branch is pushed to GitHub, Mona should already be busy checking your work. Give her a moment and keep watch in the comments. You will see her respond with progress info and the next lesson.
+1. Nüüd, kui sinu haru on GitHubi saadetud, peaks Mona juba hõivatud olema sinu tööd kontrollides. Anna talle hetk ja jälgi kommentaare. Näed teda vastamas edenemisinfo ja järgmise tunniga.
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Probleeme? 🤷</summary><br/>
 
-If you don't get feedback, here are some things to check:
+Kui sa ei saa tagasisidet, kontrolli järgmist:
 
-- Make sure your created the branch with the exact name `accelerate-with-copilot`. No prefixes or suffixes.
-- Make sure the branch was indeed published to your repository.
+- Veendu, et lõid haru täpse nimega `accelerate-with-copilot`. Ilma eesliideteta ja järelliideteta.
+- Veendu, et haru on tõesti avaldatud sinu repositooriumisse.
 
 </details>

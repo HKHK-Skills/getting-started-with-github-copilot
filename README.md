@@ -1,47 +1,47 @@
-# Getting Started with GitHub Copilot
+# GitHub Copiloti alustamine
 
-_Get started using GitHub Copilot in less than an hour._
+_Alusta GitHub Copiloti kasutamist vähem kui tunniga._
 
-## Welcome
+## Tere tulemast
 
-- **Who is this for**: Developers at any experience level looking to accelerate their code workflow.
-- **What you'll learn**: The different ways to interact with Copilot to explain, write, debug, and develop code.
-- **What you'll build**: You will guide Copilot to update Mergington High School's extracurricular activities website.
-- **Prerequisites**:
-  - Skills exercise: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
-  - Familiarity with [VS Code](https://code.visualstudio.com/)
-  - Basic coding principles
-- **How long**: This exercise takes less than one hour to complete.
+- **Kellele see on**: Arendajatele igal kogemustasemel, kes soovivad oma kooditöövoogu kiirendada.
+- **Mida õpid**: Erinevaid viise, kuidas Copilotiga suhelda koodi selgitamiseks, kirjutamiseks, silumiseks ja arendamiseks.
+- **Mida ehitad**: Juhendad Copilotit uuendama Mergington High Schooli huviringide veebilehte.
+- **Eeltingimused**:
+  - Skills harjutus: [Sissejuhatus GitHubi](https://github.com/skills/introduction-to-github)
+  - Tuttavus [VS Code'iga](https://code.visualstudio.com/)
+  - Põhilised kodeerimisprintsiibid
+- **Kestus**: See harjutus võtab vähem kui tund.
 
-In this exercise, you will:
+Selles harjutuses sa:
 
-1. Use a preconfigured Codespace to run VS Code in your browser.
-1. Learn different interaction options to develop with GitHub Copilot.
-1. Use Copilot to summarize and review your pull request.
+1. Kasutad eelseadistatud Codespace'i VS Code'i käivitamiseks brauseris.
+1. Õpid erinevaid suhtlusviise GitHub Copilotiga arendamiseks.
+1. Kasutad Copilotit pull request'i kokkuvõtmiseks ja ülevaatamiseks.
 
-### How to start this exercise
+### Kuidas seda harjutust alustada
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+Lihtsalt kopeeri harjutus oma kontole, siis anna oma lemmik Octocatile (Mona) **umbes 20 sekundit** esimese tunni ettevalmistamiseks, siis **värskenda lehte**.
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=getting-started-with-github-copilot&owner=%40me&name=skills-getting-started-with-github-copilot&description=Exercise:+Get+started+using+GitHub+Copilot&visibility=public)
+[![](https://img.shields.io/badge/Kopeeri%20harjutus-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=HKHK-Skills&template_name=getting-started-with-github-copilot&owner=%40me&name=skills-getting-started-with-github-copilot&description=Harjutus:+Alusta+GitHub+Copiloti+kasutamist&visibility=public)
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Probleeme? 🤷</summary><br/>
 
-When copying the exercise, we recommend the following settings:
+Harjutuse kopeerimisel soovitame järgmisi seadeid:
 
-- For owner, choose your personal account or an organization to host the repository.
+- Omanikuks vali oma isiklik konto või organisatsioon.
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+- Soovitame luua avaliku repositooriumi, kuna privaatsed repod kasutavad Actions minuteid.
    
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
+Kui harjutus pole 20 sekundi pärast valmis, kontrolli [Actions](../../actions) vahelehte.
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
+- Kontrolli, kas töö käib. Mõnikord võtab lihtsalt veidi kauem.
 
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+- Kui lehel on ebaõnnestunud töö, esita probleem. Tubli, leidsid vea! 🐛
 
 </details>
 
 ---
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2025 GitHub &bull; [Käitumisjuhend](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT litsents](https://gh.io/mit)

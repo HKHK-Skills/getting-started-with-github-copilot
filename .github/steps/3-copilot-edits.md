@@ -1,103 +1,103 @@
-## Step 3: Getting work done even _faster_ with Copilot Edit Mode
+## Samm 3: Töö tegemine veelgi _kiiremini_ Copilot Muuda režiimiga
 
-In our previous steps, we used features of Copilot that require more hands-on guidance and they produced mostly localized results. Now, we will explore Copilot **Edit Mode**, a feature that allows working more holistically on our repo.
+Eelmistes sammudes kasutasime Copiloti funktsioone, mis nõuavad rohkem käsitsi juhendamist ja tootsid enamasti lokaalseid tulemusi. Nüüd uurime Copilot **Muuda režiimi**, funktsiooni, mis võimaldab töötada terviklikumalt meie repos.
 
-### 📖 Theory: Copilot Edit Mode
+### 📖 Teooria: Copilot Muuda režiim
 
-Copilot **Edit Mode** and **Agent Mode** both let you apply **natural‑language** driven changes across **multiple files**, however there are some differences between them.
+Copilot **Muuda režiim** ja **Agent režiim** mõlemad lubavad rakendada **loomulik keele** poolt juhitud muudatusi **mitmes failis**, kuid nende vahel on mõned erinevused.
 
-In this step we will focus on **Edit Mode** and explore **Agent Mode** in the next step.
+Selles sammus keskendume **Muuda režiimile** ja uurime **Agent režiimi** järgmises sammus.
 
-Edit Mode is best used for **well defined** tasks where you **know the scope** of the needed changes.
+Muuda režiimi on parim kasutada **hästi määratletud** ülesannete jaoks, kus **tead muudatuste ulatust**.
 
-#### How Edit Mode works
+#### Kuidas Muuda režiim töötab
 
 ```mermaid
 flowchart LR
-   A[Select Context Files] --> B[Prompt Copilot]
-   B --> C[Proposed Changes]
-   C --> D{Review Change}
-   D --> E[Accept]
-   D --> F[Discard]
-   D -->|Refine Prompt| B
+   A[Vali konteksti failid] --> B[Viiba Copilotit]
+   B --> C[Pakutud muudatused]
+   C --> D{Vaata muudatus üle}
+   D --> E[Aktsepteeri]
+   D --> F[Loobu]
+   D -->|Täpsusta viipa| B
 
 ```
 
-1. **Set Context**: Select files that Copilot should consider in it's changes
-1. **Prompt Copilot**: Use natural language to describe the required changes.
-1. **Review Changes**: See proposed changes in-place in your code.
-1. **Accept or Discard**: Review each suggested edit and choose which to keep.
-1. **Iterate**: If needed, provide follow-up instructions to refine the changes.
+1. **Määra kontekst**: Vali failid, mida Copilot peaks oma muudatustes arvestama
+1. **Viiba Copilotit**: Kasuta loomulikku keelt vajalike muudatuste kirjeldamiseks.
+1. **Vaata muudatused üle**: Näe pakutud muudatusi otse oma koodis.
+1. **Aktsepteeri või loobu**: Vaata iga soovitatud muudatus üle ja vali, millised alles hoida.
+1. **Itera**: Vajadusel anna järeljuhiseid muudatuste täpsustamiseks.
 
-### :keyboard: Activity: Use Copilot to add a new feature! :rocket:
+### :keyboard: Tegevus: Kasuta Copilotit uue funktsiooni lisamiseks! :rocket:
 
-Our website lists activities, but it's keeping the guest list secret 🤫 
+Meie veebileht loetleb tegevusi, aga hoiab külaliste nimekirja saladuses 🤫 
 
-Let's use Copilot to change the website to display signed up students under each activity!
+Kasutame Copilotit veebilehe muutmiseks, et kuvada iga tegevuse all registreerunud õpilasi!
 
-1. At the bottom of Copilot Chat window, use the dropdown to switch to **Edit** mode.
+1. Copilot Chat akna allosas kasuta rippmenüüd **Muuda** režiimile lülitumiseks.
 
-   <img width="350" alt="image" src="https://github.com/user-attachments/assets/646fc94a-7d60-4821-b9cf-9ec6f4fd03d7" />
+   <img width="350" alt="pilt" src="https://github.com/user-attachments/assets/646fc94a-7d60-4821-b9cf-9ec6f4fd03d7" />
 
-1. Open the files related to our webpage then drag each editor window (or file) to the chat panel, informing Copilot to use them as context.
+1. Ava meie veebilehega seotud failid ja lohista iga redaktori aken (või fail) vestluspaneeli, teavitades Copilotit neid kontekstina kasutama.
 
    - `src/static/app.js`
    - `src/static/index.html`
    - `src/static/styles.css`
 
-   <img width="400" alt="image showing files added to context" src="https://github.com/user-attachments/assets/8026a86b-b350-4b98-bf4f-764b61d157e7" />
+   <img width="400" alt="pilt failidest konteksti lisamisel" src="https://github.com/user-attachments/assets/8026a86b-b350-4b98-bf4f-764b61d157e7" />
 
-   > 💡 **Tip:** You can also use the **Add Context...** button to provide other sources of context items, like a GitHub issue, the entire codebase, or the results of a terminal window.
+   > 💡 **Vihje:** Saad kasutada ka **Add Context...** nuppu teiste kontekstiüksuste lisamiseks, nagu GitHubi issue, terve koodibaas või terminaliakna tulemused.
 
-1. Ask Copilot to update our project to display the current participants of activities. Wait a moment for the edit suggestions to arrive and be applied.
+1. Palu Copilotil uuendada meie projekti tegevuste praeguste osalejate kuvamiseks. Oota hetk, kuni muudatussoovitused saabuvad ja rakendatakse.
 
-   > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
+   > ![Static Badge](https://img.shields.io/badge/-Viip-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > Hey Copilot, can you please edit the activity cards to add a participants section.
-   > It will show what participants that are already signed up for that activity as a bulleted list.
-   > Remember to make it pretty!
+   > Hei Copilot, kas saad palun muuta tegevuskaarte, et lisada osalejate sektsioon.
+   > See näitab, millised osalejad on juba sellele tegevusele registreeritud täpploendina.
+   > Ära unusta seda ilusaks teha!
    > ```
 
-   - An extra icon has appeared next to the file names and open editor windows indicating they have suggested edits.
-   - A suggested edits panel has appeared in the bottom right of the editor window providing controls to jump to the recommended changes.
+   - Failinimede ja avatud redaktoriakende kõrvale on ilmunud lisaikoon, mis näitab, et neil on soovitatud muudatusi.
+   - Redaktoriakna paremasse alumisse nurka on ilmunud soovitatud muudatuste paneel, mis pakub juhtnuppe soovitatud muudatuste juurde hüppamiseks.
 
-      <img width="200" alt="files with icons indicating they have been edited" src="https://github.com/user-attachments/assets/9c7c2e10-cd18-43c5-9947-cffd6dde0473" />
+      <img width="200" alt="failid ikoonidega, mis näitavad nende muutmist" src="https://github.com/user-attachments/assets/9c7c2e10-cd18-43c5-9947-cffd6dde0473" />
 
-      <img width="250" alt="edit navigation panel" src="https://github.com/user-attachments/assets/a84965a5-2f43-4c93-a814-0fdeb3a06494" />
+      <img width="250" alt="muudatuste navigeerimispaneel" src="https://github.com/user-attachments/assets/a84965a5-2f43-4c93-a814-0fdeb3a06494" />
 
 
-1. Before we simply accept the changes, please check our website again and verify everything is updated as expected. Here is an example of an updated activity card. You may need to restart the app or refresh the page.
+1. Enne muudatuste lihtsalt aktsepteerimist kontrolli palun meie veebilehte uuesti ja veendu, et kõik on ootuspäraselt uuendatud. Siin on näide uuendatud tegevuskaardist. Võib-olla pead rakenduse taaskäivitama või lehe värskendama.
 
-   <img width="350" alt="Activity card with participant info" src="https://github.com/user-attachments/assets/c4d56187-4791-4c8e-87d7-d5ce7cdc0bee" />
+   <img width="350" alt="Tegevuskaart osaleja infoga" src="https://github.com/user-attachments/assets/c4d56187-4791-4c8e-87d7-d5ce7cdc0bee" />
 
-   > 🪧 **Note:** Your activity card may look different. Copilot won't always produce the same results.
+   > 🪧 **Märkus:** Sinu tegevuskaart võib erinev välja näha. Copilot ei tooda alati samu tulemusi.
 
    <details>
-   <summary>Need help? 🤷</summary><br/>
-   If the website is not loading, here are some things to check.
+   <summary>Vajad abi? 🤷</summary><br/>
+   Kui veebileht ei laadi, kontrolli järgmist.
 
-   - Restart the VS Code Debugger to make sure the latest version of the website is served.
-   - If you forgot the url, or closed the window, please review step 1.
-   - Try hard refreshing the webpage or opening in a private window so it downloads a fresh copy.
+   - Taaskäivita VS Code'i silur, et veenduda veebilehe viimase versiooni teenindamises.
+   - Kui unustasid url-i või sulgesid akna, vaata palun sammu 1.
+   - Proovi veebilehte tugevalt värskendada või ava privaataknas, et see laadiks värske koopia.
 
    </details>
 
-1. Now that we have confirmed our changes are good, use the panel to cycle through each suggested edit and press **Keep** to apply the change.
+1. Nüüd, kui oleme kinnitanud, et meie muudatused on head, kasuta paneeli iga soovitatud muudatuse läbimiseks ja vajuta **Keep** muudatuse rakendamiseks.
 
-   > 💡 **Tip:** You can accept the changes directly, modify them, or provide additional instruction to refine them using the chat interface.
+   > 💡 **Vihje:** Saad muudatused otse aktsepteerida, neid muuta või anda lisajuhiseid nende täpsustamiseks vestlusliidese kaudu.
 
-1. With our new feature complete, please **commit** and **push** the changes to GitHub.
+1. Meie uue funktsiooni valmides palun **commit'i** ja **saada** muudatused GitHubi.
 
-1. Wait a moment for Mona to check your work, provide feedback, and share the next lesson.
+1. Oota hetk, kuni Mona kontrollib sinu tööd, annab tagasisidet ja jagab järgmist tundi.
 
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Probleeme? 🤷</summary><br/>
 
-If you don't get feedback, here are some things to check:
+Kui sa ei saa tagasisidet, kontrolli järgmist:
 
-- Make sure your commit the changes in the `src/static/` directory to the branch `accelerate-with-copilot` and pushed/synchronized to GitHub.
-- If Mona found a mistake, simply make a correction and push your changes again. Mona will check your work as many times as needed.
+- Veendu, et commit'isid muudatused `src/static/` kaustas harusse `accelerate-with-copilot` ja saatsid/sünkroniseerisid GitHubi.
+- Kui Mona leidis vea, tee lihtsalt parandus ja saada muudatused uuesti. Mona kontrollib sinu tööd nii mitu korda kui vaja.
 
 </details>
